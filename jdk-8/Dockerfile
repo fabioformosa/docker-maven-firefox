@@ -19,4 +19,5 @@ RUN wget -q -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/re
 	&& tar xzf /tmp/geckodriver.tar.gz -C /opt \
 	&& rm /tmp/geckodriver.tar.gz \
 	&& mv /opt/geckodriver /opt/geckodriver-$GECKODRIVER_VERSION \
-	&& ln -s /opt/geckodriver-$GECKODRIVER_VERSION /usr/bin/geckodriver
+  && chmod 755 /opt/geckodriver-$GECKODRIVER_VERSION \
+  && ln -s /opt/geckodriver-$GECKODRIVER_VERSION /usr/bin/geckodriver
