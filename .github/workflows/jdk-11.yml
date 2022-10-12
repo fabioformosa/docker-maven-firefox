@@ -2,7 +2,7 @@ name: jdk-11
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths: [ 'jdk-11/**' ]
   workflow_dispatch:
 
@@ -24,5 +24,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./jdk-11
-          tags: markhobson/maven-firefox:jdk-11
+          tags: fabioformosaddg/maven-firefox:jdk-11
           push: true
